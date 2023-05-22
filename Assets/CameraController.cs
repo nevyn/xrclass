@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         var destination = followPlayer.transform.position + offset;
-        var lerped = Vector3.Lerp(transform.position, destination, Time.deltaTime * 5.0f);
+        var lerped = Vector3.Lerp(transform.position, destination, Time.deltaTime * 3.0f);
         transform.position = lerped;
     }
 }
