@@ -29,9 +29,11 @@ public class PlayerGameplay : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag != "Pickup") return;
-        
-        Destroy(collision.gameObject);
+        GameObject other = collision.gameObject;
+        if(other.tag != "Pickup") return;
+
+        other.transform.parent = this.transform;
+        Destroy(other.GetComponent<Rigidbody>());
         UpdateScore(score+1);
     }
     
