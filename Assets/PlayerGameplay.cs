@@ -7,6 +7,7 @@ using TMPro;
 public class PlayerGameplay : MonoBehaviour
 {
     public TextMeshProUGUI scoreLabel;
+    public GameObject sphere;
     int score;
 
     // Start is called before the first frame update
@@ -25,6 +26,9 @@ public class PlayerGameplay : MonoBehaviour
     {
         score = newScore;
         scoreLabel.text = $"Score: {score}";
+
+        float scale = 1.0f + score/10.0f;
+        sphere.transform.localScale = new Vector3(scale, scale, scale);
     }
 
     void OnCollisionEnter(Collision collision)
