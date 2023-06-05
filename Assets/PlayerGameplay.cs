@@ -10,18 +10,6 @@ public class PlayerGameplay : MonoBehaviour
     public GameObject sphere;
     int score;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void UpdateScore(int newScore)
     {
         score = newScore;
